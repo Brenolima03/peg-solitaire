@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Resta um</title>
+</head>
+<body>
+  <div class="header">
+    <h1>Resta um</h1>
+    <div id="timer">00:00</div>
+  </div>
+
+  <div id="board-container">
+    <div id="board"></div>
+    <div id="board-overlay"></div>
+  </div>
+
+  <div id="message"></div>
+  <div class="controls">
+
+    <dialog id="tutorialModal">
+      <button type="button" id="close">x</button>
+      <h2>🧠 Tutorial — Jogo do Resta Um (Peg Solitaire)</h2>
+
+      <p>
+        Bem-vindo! Este é um clássico jogo de lógica que desafia sua capacidade
+        de planejamento e raciocínio estratégico.
+      </p>
+
+      <hr>
+
+      <h3>🎯 Objetivo do jogo</h3>
+      <p>
+        O objetivo é <strong>terminar o jogo com apenas uma peça (pino)</strong>
+        restante no tabuleiro.
+      </p>
+      <ul>
+        <li>✅ Você vence se sobrar <strong>exatamente 1 pino</strong></li>
+        <li>❌ O jogo termina se não houver mais movimentos possíveis</li>
+      </ul>
+
+      <hr>
+
+      <h3>🕹️ Como jogar</h3>
+      <ol>
+        <li>
+          <strong>Clique em um pino</strong> para selecioná-lo.<br>
+          O pino selecionado ficará destacado.
+        </li>
+        <li>
+          <strong>Clique em um espaço vazio</strong> para mover o pino.<br>
+          O pino selecionado irá pular outro pino.
+        </li>
+      </ol>
+
+      <hr>
+
+      <h3>✅ Regras de movimento</h3>
+      <p>Um movimento só é válido se:</p>
+      <ul>
+        <li>Houver <strong>um pino adjacente</strong> entre a origem e o destino</li>
+        <li>O destino estiver <strong>vazio</strong></li>
+        <li>O movimento for feito <strong>na horizontal ou vertical</strong></li>
+        <li>A distância for de <strong>exatamente duas casas</strong></li>
+      </ul>
+
+      <p><em>Movimentos diagonais não são permitidos.</em></p>
+
+      <hr>
+
+      <h3>🔄 Controles do jogo</h3>
+      <ul>
+        <li><strong>Começar / Reiniciar</strong> — Inicia ou reinicia a partida</li>
+        <li><strong>Voltar jogada</strong> — Desfaz o último movimento</li>
+        <li><strong>Parar o jogo</strong> — Encerra a partida atual</li>
+      </ul>
+
+      <hr>
+
+      <h3>💡 Dicas</h3>
+      <ul>
+        <li>Pense vários movimentos à frente</li>
+        <li>Tente manter o centro do tabuleiro ocupado</li>
+        <li>Nem toda jogada possível é uma boa jogada 😉</li>
+      </ul>
+
+      <p><strong>Boa sorte e bom jogo! 🎉</strong></p>
+
+    </dialog>
+
+    <button id="startButton">Começar</button>
+    <button id="restartButton" style="display:none;">Reiniciar</button>
+    <button id="undoButton" style="display:none;">Voltar jogada</button>
+    <button id="stopButton" style="display:none;">Parar o jogo</button>
+    <button id="tutorialButton" style="display:none;">Tutorial</button>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
